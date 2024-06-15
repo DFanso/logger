@@ -15,11 +15,11 @@ pool.on('error', e => {
 })
 
 async function generate () {
-  await pool.query('CREATE DATABASE logger') // create db
+  await pool.query('CREATE DATABASE loggers') // create db
   const loggerDB = new Pool({
     user: process.env.PGUSER,
     host: process.env.PGHOST,
-    database: 'logger',
+    database: 'loggers',
     password: process.env.PGPASSWORD,
     port: 5432
   })
